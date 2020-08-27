@@ -49,5 +49,3 @@ MongoDB with Flask templating was used to create a new HTML page that displays a
 
 
 
-* Use Bootstrap to structure your HTML template.
-
