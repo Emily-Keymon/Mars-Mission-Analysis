@@ -41,7 +41,7 @@ def mars_news(browser):
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
 
-    # Optional delay for loading the page
+    # Delay for loading the page
     browser.is_element_present_by_css("ul.item_list li.slide", wait_time=1)
 
     # Convert the browser html to a soup object and then quit the browser

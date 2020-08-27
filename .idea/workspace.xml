@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission_to_Mars/.ipynb_checkpoints/Mission_to_Mars-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mission_to_Mars/.ipynb_checkpoints/Mission_to_Mars-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission_to_Mars/Mission_to_Mars.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Mission_to_Mars/Mission_to_Mars.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission_to_Mars/app/scrape_mars.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission_to_Mars/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mission_to_Mars/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission_to_Mars/app/scrape_mars.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mission_to_Mars/app/scrape_mars.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
       <recent name="C:\Users\redru\OneDrive\Vandy\web-scraping-challenge\Mission_to_Mars\app\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scrape_mars">
+  <component name="RunManager" selected="Python.app">
     <configuration name="Mission_to_Mars" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="web-scraping-challenge" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,30 +161,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598228324307" />
-    <state x="496" y="107" key="FileChooserDialogImpl" timestamp="1598398826380">
+    <state x="496" y="107" key="FileChooserDialogImpl" timestamp="1598484437482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="496" y="107" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598398826380" />
-    <state width="1509" height="195" key="GridCell.Tab.0.bottom" timestamp="1598402386378">
+    <state x="496" y="107" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598484437482" />
+    <state width="1509" height="195" key="GridCell.Tab.0.bottom" timestamp="1598569476361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598148781917" />
-    <state width="1509" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598402386378" />
-    <state width="1509" height="195" key="GridCell.Tab.0.center" timestamp="1598402386378">
+    <state width="1509" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598569476361" />
+    <state width="1509" height="195" key="GridCell.Tab.0.center" timestamp="1598569476361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598148781917" />
-    <state width="1509" height="195" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598402386378" />
-    <state width="1509" height="195" key="GridCell.Tab.0.left" timestamp="1598402386378">
+    <state width="1509" height="195" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598569476361" />
+    <state width="1509" height="195" key="GridCell.Tab.0.left" timestamp="1598569476361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598148781917" />
-    <state width="1509" height="195" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598402386378" />
-    <state width="1509" height="195" key="GridCell.Tab.0.right" timestamp="1598402386378">
+    <state width="1509" height="195" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598569476361" />
+    <state width="1509" height="195" key="GridCell.Tab.0.right" timestamp="1598569476361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598148781917" />
-    <state width="1509" height="195" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598402386378" />
+    <state width="1509" height="195" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1598569476361" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1598322339305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

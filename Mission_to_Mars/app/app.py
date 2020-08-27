@@ -3,7 +3,7 @@
 
 
 from flask import Flask, render_template, redirect, url_for
-#import pymongo as PyMongo
+import pymongo as PyMongo
 from flask_pymongo import PyMongo
 import scrape_mars
 
