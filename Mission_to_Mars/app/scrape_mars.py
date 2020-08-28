@@ -6,7 +6,7 @@
 
 # Convert Jupyter notebook into a Python script called scrape_mars.py
 
-# Import Splinter, BeautifulSoup, and Pandas
+# Import dependencies
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
@@ -14,7 +14,7 @@ import datetime as dt
 
 
 def scrape_all():
-    # Initiate headless driver for deployment
+    # Initialize a headless chrome browser in splinter
     browser = Browser("chrome", executable_path="chromedriver", headless=True)
 
     news_title, news_paragraph = mars_news(browser)
@@ -37,7 +37,7 @@ def scrape_all():
 def mars_news(browser):
 
     # Scrape Mars News
-    # Visit the mars nasa news site
+    # Visit the Mars NASA News Site
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
 
@@ -63,7 +63,7 @@ def mars_news(browser):
 
 
 def featured_image(browser):
-    # Visit URL
+    # Visit url for JPL Featured Space Image
     url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(url)
 
@@ -82,7 +82,7 @@ def featured_image(browser):
 
     # Add try/except for error handling
     try:
-        # find the relative image url
+        # Find the relative image url
         img_url_rel = img_soup.select_one('figure.lede a img').get("src")
 
     except AttributeError:
@@ -96,22 +96,22 @@ def featured_image(browser):
 def mars_facts():
     # Add try/except for error handling
     try:
-        # use 'read_html' to scrape the facts table into a dataframe
+        # Read html into a dataframe
         df = pd.read_html('http://space-facts.com/mars/')[0]
 
     except BaseException:
         return None
 
-    # assign columns and set index of dataframe
+    # Add columns to the dataframe, index description
     df.columns = ['Description', 'Mars']
     df.set_index('Description', inplace=True)
 
-    # Convert dataframe into HTML format, add bootstrap
+    # Save dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
 
 
 def hemispheres(browser):
-    # A way to break up long strings
+    # Visit the url
     url = (
         "https://astrogeology.usgs.gov/search/"
         "results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -127,17 +127,17 @@ def hemispheres(browser):
         hemi_data = scrape_hemisphere(browser.html)
         # Append hemisphere object to list
         hemisphere_image_urls.append(hemi_data)
-        # Finally, we navigate backwards
+        # Navigate backwards
         browser.back()
 
     return hemisphere_image_urls
 
 
 def scrape_hemisphere(html_text):
-    # parse html text
+    # Parse html text
     hemi_soup = soup(html_text, "html.parser")
 
-    # adding try/except for error handling
+    # Add try/except for error handling
     try:
         title_elem = hemi_soup.find("h2", class_="title").get_text()
         sample_elem = hemi_soup.find("a", text="Sample").get("href")
