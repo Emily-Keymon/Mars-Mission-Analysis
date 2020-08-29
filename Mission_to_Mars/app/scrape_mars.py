@@ -1,25 +1,25 @@
 ##################################################
-# Step 2 - MongoDB and Flask Application
+# Step 2A - MongoDB and Flask Application
 # Use MongoDB with Flask templating to create a new HTML page that displays
 # all of the information that was scraped from the urls in Step 1
-##################################################
-
 # Convert Jupyter notebook into a Python script called scrape_mars.py
 
+##################################################
 # Import dependencies
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
 
-
+##################################################
+# Function to execute all scraping
 def scrape_all():
     # Initialize a headless chrome browser in splinter
     browser = Browser("chrome", executable_path="chromedriver", headless=True)
 
     news_title, news_paragraph = mars_news(browser)
 
-    # Run all scraping functions and store results in a dictionary
+    # Store all scraping results in a dictionary
     data = {
         "news_title": news_title,
         "news_paragraph": news_paragraph,
@@ -33,7 +33,8 @@ def scrape_all():
     browser.quit()
     return data
 
-
+##################################################
+# Function to scrape Mars NASA News Site
 def mars_news(browser):
 
     # Scrape Mars News
@@ -61,8 +62,10 @@ def mars_news(browser):
 
     return news_title, news_p
 
-
+##################################################
+# Function to scrape JPL Featured Space Image
 def featured_image(browser):
+
     # Visit url for JPL Featured Space Image
     url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(url)
@@ -93,6 +96,7 @@ def featured_image(browser):
 
     return img_url
 
+##################################################
 def mars_facts():
     # Add try/except for error handling
     try:
@@ -109,7 +113,7 @@ def mars_facts():
     # Save dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
 
-
+##################################################
 def hemispheres(browser):
     # Visit the url
     url = (
@@ -132,7 +136,7 @@ def hemispheres(browser):
 
     return hemisphere_image_urls
 
-
+##################################################
 def scrape_hemisphere(html_text):
     # Parse html text
     hemi_soup = soup(html_text, "html.parser")
@@ -154,7 +158,7 @@ def scrape_hemisphere(html_text):
 
     return hemispheres
 
-
+##################################################
 if __name__ == "__main__":
 
     # If running as script, print scraped data
