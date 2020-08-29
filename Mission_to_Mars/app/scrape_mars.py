@@ -12,14 +12,14 @@ import pandas as pd
 import datetime as dt
 
 ##################################################
-# Function to execute all scraping
+# Function to execute all scraping code
 def scrape_all():
     # Initialize a headless chrome browser in splinter
     browser = Browser("chrome", executable_path="chromedriver", headless=True)
 
     news_title, news_paragraph = mars_news(browser)
 
-    # Store all scraping results in a dictionary
+    # Store all scraping results in a Python dictionary
     data = {
         "news_title": news_title,
         "news_paragraph": news_paragraph,
@@ -34,10 +34,9 @@ def scrape_all():
     return data
 
 ##################################################
-# Function to scrape Mars NASA News Site
+# Function to scrape Mars news from the Mars NASA News Site
 def mars_news(browser):
 
-    # Scrape Mars News
     # Visit the Mars NASA News Site
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
@@ -63,10 +62,10 @@ def mars_news(browser):
     return news_title, news_p
 
 ##################################################
-# Function to scrape JPL Featured Space Image
+# Function to scrape images from JPL Featured Space Image site
 def featured_image(browser):
 
-    # Visit url for JPL Featured Space Image
+    # Visit url
     url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(url)
 
@@ -97,7 +96,9 @@ def featured_image(browser):
     return img_url
 
 ##################################################
+# Function to read Mars facts into a Pandas DataFrame
 def mars_facts():
+
     # Add try/except for error handling
     try:
         # Read html into a dataframe
@@ -114,29 +115,33 @@ def mars_facts():
     return df.to_html(classes="table table-striped")
 
 ##################################################
+# Function to scrape four hemisphere images
 def hemispheres(browser):
     # Visit the url
     url = (
         "https://astrogeology.usgs.gov/search/"
         "results?q=hemisphere+enhanced&k1=target&v1=Mars"
     )
-
     browser.visit(url)
 
     # Click the link, find the sample anchor, return the href
     hemisphere_image_urls = []
     for i in range(4):
+
         # Find the elements on each loop to avoid a stale element exception
         browser.find_by_css("a.product-item h3")[i].click()
         hemi_data = scrape_hemisphere(browser.html)
+
         # Append hemisphere object to list
         hemisphere_image_urls.append(hemi_data)
+
         # Navigate backwards
         browser.back()
 
     return hemisphere_image_urls
 
 ##################################################
+# Function to scrape hemisphere data
 def scrape_hemisphere(html_text):
     # Parse html text
     hemi_soup = soup(html_text, "html.parser")
@@ -147,6 +152,7 @@ def scrape_hemisphere(html_text):
         sample_elem = hemi_soup.find("a", text="Sample").get("href")
 
     except AttributeError:
+
         # Image error will return None, for better front-end handling
         title_elem = None
         sample_elem = None
