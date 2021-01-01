@@ -33,11 +33,9 @@ The goal of this project was to develop a webpage to present scraped data from s
 5. A template HTML file called `index.html` was creted that took the mars data dictionary and displayed all of the data in the appropriate HTML elements. 
 6. Bootstrap was used to structure the HTML template.
 
-![final_app_part1.png](Images/final_app_part1.png)
-![final_app_part2.png](Images/final_app_part2.png)
-
 ---
 ## Results
+
 
 
 
