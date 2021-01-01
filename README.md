@@ -32,14 +32,17 @@ The goal of this project was to develop a webpage to present scraped data from s
 9.  Parsed the HTML data from each page, and extract the links of the latest Mars hemisphere images.
 10. Compiled all of the extracted data into a Python dictionary.
 
+### Flask Application
+1.  Created a connection to the MongoDB engine, and set the path to the appropriate database and collection.
+2.  Created a Scrape route that imported and calls the Python scraping code, and stores the outputted Python dictionary in MongoDB.
+3.  Created a Home route that loaded the stored Python dictionary from MongoDB and passed it to the HTML webpage.
 
-### Step 2 - MongoDB and Flask Application
-1.  The Jupyter notebook was converted into a Python script called `scrape_mars.py` with a function called `scrape` that executed all of the scraping code from above and returned one Python dictionary containing all of the scraped data.
-2. A route was created called `/scrape` that imported `scrape_mars.py` script and called the `scrape` function.
-3. Return value stored in Mongo as a Python dictionary.
-4. A root route `/` was created that queried the Mongo database and passed the mars data into an HTML template to display the data.
-5. A template HTML file called `index.html` was creted that took the mars data dictionary and displayed all of the data in the appropriate HTML elements. 
-6. Bootstrap was used to structure the HTML template.
+### Webpage Creation
+1.  Created a navigation bar with a header and a button that calls the Scrape route from the Flask App.
+2.  Created a content card to display the name and summary of the latest Mars news article.
+3.  Created a content card to display the latest Mars featured image.
+4.  Created a content card to display the latest Mars facts.
+5.  Created a content card to display the latest Mars hemisphere images.
 
 ---
 ## Results
