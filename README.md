@@ -10,7 +10,18 @@ The goal of this project was to develop a webpage to present scraped data from s
 * Mars Facts webpage was visited [here](https://space-facts.com/mars/)
 * The USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) 
 
-## Step 1 - Scraping
+---
+## Tools Used
+* Jupyter Notebook
+* Python - Pandas, Browser from splinter, BeautifulSoup from bs4, Flask, PyMongo, Datetime
+* PyCharm - Python IDE
+* MongoDB
+* HTML, CSS
+
+---
+## Tasks
+### Step 1 - Scraping
+1.  
 
 Initial scraping was completed by using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.  The Jupyter Notebook file was called `mission_to_mars.ipynb`.
 
