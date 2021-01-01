@@ -36,6 +36,9 @@ The goal of this project was to develop a webpage to present scraped data from s
 ---
 ## Results
 
+![Mission_to_Mars_screenshot](https://user-images.githubusercontent.com/64673015/103445542-34599680-4c3b-11eb-9038-2f4680dc2e4e.PNG)
+
+
 
 
 
