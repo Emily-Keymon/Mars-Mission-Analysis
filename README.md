@@ -3,7 +3,12 @@ The goal of this project was to develop a webpage to present scraped data from s
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
-A web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
+---
+## Data Sources
+* [NASA Mars News Site](https://mars.nasa.gov/news/) 
+* JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
+* Mars Facts webpage was visited [here](https://space-facts.com/mars/)
+* The USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) 
 
 ## Step 1 - Scraping
 
